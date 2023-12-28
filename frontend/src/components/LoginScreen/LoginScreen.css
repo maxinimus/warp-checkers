@@ -1,7 +1,0 @@
-.login {
-  display: flex;
-  align-items: center; /* Vertical alignment */
-  justify-content: center; /* Horizontal alignment (if needed) */
-  height: 100%; /* Ensure parent has a height */
-  color: #333; /* Dark gray text */
-}

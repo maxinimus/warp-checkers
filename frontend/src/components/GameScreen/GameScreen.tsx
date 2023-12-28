@@ -1,5 +1,6 @@
 import React from "react";
 import "./GameScreen.css";
+import "../index.css";
 
 type Piece = {
   color: "black" | "white";

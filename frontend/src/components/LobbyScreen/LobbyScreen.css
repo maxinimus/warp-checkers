@@ -1,0 +1,43 @@
+.lobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+
+.lobby-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30vw; /* Spacing between elements */
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: black;
+  border: none;
+}
+
+.start-button:hover {
+  /* Increse the size of the button on hover */
+  transform: scale(1.05);
+}
+
+.or-label {
+  font-size: 18px;
+  color: var(--secondary-color);
+  user-select: none;
+}
+
+.game-code-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  border: 1px solid #ccc; /* Adjust border as needed */
+}
