@@ -1,0 +1,66 @@
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr); /* 10 rows */
+  grid-template-columns: repeat(14, 1fr); /* 12 columns */
+  border: 0.5rem solid black;
+  width: 80vw;
+  height: 80vw;
+  max-width: 700px; /* Maximum board width */
+  max-height: 600px; /* Maximum board height */
+}
+
+.row {
+  display: contents; /* Display all children in a single row */
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.light {
+  background-color: #fff; /* Light squares */
+}
+
+.cell.dark {
+  background-color: #33242e; /* Dark squares */
+}
+
+.cell.warp {
+  opacity: 0.33;
+}
+
+.piece {
+  width: 80%; /* Smaller than the cell to create a gap */
+  height: 80%; /* Same as width */
+  border-radius: 50%; /* Circular pieces */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piece.black {
+  background-color: #000; /* Black pieces */
+  color: #fff; /* White text for black pieces */
+}
+
+.piece.white {
+  background-color: #fff; /* White pieces */
+  color: #000; /* Black text for white pieces */
+}
+
+.piece.king {
+  font-weight: bold; /* Bold text for kings */
+  border: 2px solid gold; /* Gold border for kings */
+}
