@@ -8,12 +8,20 @@ type Piece = {
 
 type Cell = Piece | null;
 
+// Board Size Constants
+const BOARD_SIZE = 10;
+
+const boardStyle = {
+  gridTemplateColumns: `repeat(${BOARD_SIZE + 4}, 1fr)`,
+  gridTemplateRows: `repeat(${BOARD_SIZE}, 1fr)`,
+};
+
 // Function to create the initial board state
 const createInitialBoardState = (): Cell[][] => {
   const initialBoardState: Cell[][] = [];
-  for (let row = 0; row < 10; row++) {
+  for (let row = 0; row < BOARD_SIZE; row++) {
     initialBoardState[row] = [];
-    for (let col = 0; col < 14; col++) {
+    for (let col = 0; col < BOARD_SIZE + 4; col++) {
       initialBoardState[row][col] = null; // All cells are initially empty
     }
   }
@@ -28,7 +36,7 @@ const PieceComponent: React.FC<{ piece: Piece }> = ({ piece }) => {
 
 const Board: React.FC<{ board: Cell[][] }> = ({ board }) => {
   return (
-    <div className="board">
+    <div className="board" style={boardStyle}>
       {board.map((row, rowIndex) => (
         <div className="row" key={rowIndex}>
           {row.map((cell, colIndex) => {
@@ -37,8 +45,8 @@ const Board: React.FC<{ board: Cell[][] }> = ({ board }) => {
             const warpCell =
               colIndex == 0 ||
               colIndex == 1 ||
-              colIndex == 12 ||
-              colIndex == 13;
+              colIndex == BOARD_SIZE + 2 ||
+              colIndex == BOARD_SIZE + 3;
             return (
               <div
                 key={colIndex}

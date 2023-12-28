@@ -3,17 +3,14 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full height of the viewport */
-  background-color: #f0f0f0; /* Light gray background */
 }
 
 .board {
   display: grid;
-  grid-template-rows: repeat(10, 1fr); /* 10 rows */
-  grid-template-columns: repeat(14, 1fr); /* 12 columns */
   border: 0.5rem solid black;
   width: 80vw;
   height: 80vw;
-  max-width: 700px; /* Maximum board width */
+  max-width: 840px; /* Maximum board width */
   max-height: 600px; /* Maximum board height */
 }
 
@@ -24,13 +21,15 @@
 .cell {
   width: 100%;
   height: 100%;
+  opacity: 0.9; /* Default opacity */
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none; /* Prevent text selection */
 }
 
 .cell.light {
-  background-color: #fff; /* Light squares */
+  background-color: #d8d8e8; /* Light squares */
 }
 
 .cell.dark {
@@ -38,7 +37,7 @@
 }
 
 .cell.warp {
-  opacity: 0.33;
+  opacity: 0.2; /* Warp squares */
 }
 
 .piece {
@@ -63,4 +62,11 @@
 .piece.king {
   font-weight: bold; /* Bold text for kings */
   border: 2px solid gold; /* Gold border for kings */
+}
+
+.cell:hover {
+  cursor: pointer; /* Changes cursor to hand pointer on hover */
+
+  outline: 5px solid #00aaff; /* Custom color and width */
+  outline-offset: -5px; /* Offset from the element border */
 }

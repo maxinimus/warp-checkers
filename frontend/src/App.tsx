@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router";
 
 import "./App.css";
-import GameScreen from "./pages/GameScreen/GameScreen";
-import LoginScreen from "./pages/LoginScreen/LoginScreen";
+import GameScreen from "./components/GameScreen/GameScreen";
+import LoginScreen from "./components/LoginScreen/LoginScreen";
 
 function App() {
   return (
